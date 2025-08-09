@@ -1,0 +1,113 @@
+body {
+    background: linear-gradient(135deg, #464964 0%, #767735 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+<  
+
+.calculator-container {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.17), 0 1.5px 4px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    background: rgba(49, 77, 50, 0.9);
+    padding: 32px 22px;
+    width: 330px;
+}
+
+#screen {
+    background: #6068ac;
+    color: #f7f7ff;
+    border-radius: 10px;
+    min-height: 66px;
+    margin-bottom: 18px;
+    padding: 18px 18px 6px 18px;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: "Roboto Mono", monospace;
+}
+
+#userInput {
+    color: #42c43e;
+    font-size: 1.15rem;
+    opacity: 0.88;
+    min-height: 24px;
+}
+#output {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #ff8364;
+}
+
+.buttons-area {
+    display: grid;
+    grid-template-columns: repeat(4, 62px);
+    grid-template-rows: repeat(5, 52px);
+    gap: 16px 12px;
+}
+
+.btn {
+    appearance: none;
+    background-color: #343c6c;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.23rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.14s, color 0.14s, box-shadow 0.14s;
+    box-shadow: 0 2px 10px 0 rgba(50,60,120,0.07);
+    outline: none;
+    user-select: none;
+    padding: 0;
+}
+
+.btn:active,
+.btn:focus {
+    background: #494ea5;
+}
+
+.btn.operator {
+    background: #7b32c0;
+    color: #ffe164;
+    font-weight: 700;
+}
+.btn.operator:active, .btn.operator:focus {
+    background: #ad49dd;
+}
+
+.btn.function {
+    background: #322569;
+    color: #fea6a6;
+}
+.btn.function:active, .btn.function:focus {
+    background: #c03b5d;
+    color: #fff;
+}
+
+#equalBtn {
+    background: #ffe164;
+    color: #3d366a;
+    grid-row: span 2;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+#equalBtn:active,
+#equalBtn:focus {
+    background: #fbb034;
+    color: #fff;
+}
+
+.btn.zero {
+    grid-column: span 2;
+}
+
+.btn:hover {
+    filter: brightness(1.12);
+    box-shadow: 0 2px 14px 0 rgba(250, 220, 100, 0.055);
+}
